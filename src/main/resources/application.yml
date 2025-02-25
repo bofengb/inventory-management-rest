@@ -1,0 +1,36 @@
+# Parameters
+db-url: jdbc:postgresql://localhost:5432/postgres
+db-username: postgres
+db-password: root
+cors-whitelist: http://localhost:3000
+
+# Actuator
+management.endpoints.web.exposure.include: info,health,httptrace
+
+# Server
+server:
+  port: 8080
+  error:
+    include-stacktrace: never
+    include-message: always
+  servlet:
+    context-path: "/rest"
+
+# Database
+spring:
+  sql:
+    init:
+      mode: always
+  datasource:
+    url: ${db-url}
+    username: ${db-username}
+    password: ${db-password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
