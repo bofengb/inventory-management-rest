@@ -29,7 +29,7 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
       - name: Build Spring Boot Application
-        run: mvn clean package
+        run: mvn clean install
       - name: Set vars
         run: |
           if [[ $GITHUB_REF == 'refs/heads/prod' ]]; then
