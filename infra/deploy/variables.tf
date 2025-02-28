@@ -18,6 +18,6 @@ variable "db_username" {
   default     = "root"
 }
 
-variable "db_password" {
-  description = "Password for the Terraform database"
-}
+#variable "db_password" {
+#  description = "Password for the Terraform database"
+#}
