@@ -24,4 +24,5 @@ variable "db_username" {
 
 variable "ecr_app_image" {
   description = "Path to the ECR repo with the API image"
+  default     = "dummy-value"
 }
