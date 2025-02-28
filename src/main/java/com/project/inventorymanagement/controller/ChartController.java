@@ -38,3 +38,4 @@ public class ChartController {
         return ResponseEntity.ok().body(chartService.getInventoryTransaction());
     }
 }
+
