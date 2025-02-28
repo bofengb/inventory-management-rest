@@ -21,3 +21,7 @@ variable "db_username" {
 #variable "db_password" {
 #  description = "Password for the Terraform database"
 #}
+
+variable "ecr_app_image" {
+  description = "Path to the ECR repo with the API image"
+}
