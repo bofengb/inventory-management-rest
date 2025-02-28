@@ -338,6 +338,7 @@ data "aws_iam_policy_document" "elb" {
       "elasticloadbalancing:AddTags",
       "elasticloadbalancing:DescribeTags",
       "elasticloadbalancing:ModifyListener",
+      "elasticloadbalancing:ModifyTargetGroup",
       "ec2:DescribeAccountAttributes",
       "ec2:DescribeAddresses",
       "ec2:DescribeAvailabilityZones",
