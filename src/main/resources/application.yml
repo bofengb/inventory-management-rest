@@ -1,7 +1,7 @@
 # Parameters
-db-url: jdbc:postgresql://localhost:5432/postgres
-db-username: postgres
-db-password: root
+#db-url: jdbc:postgresql://localhost:5432/postgres
+#db-username: postgres
+#db-password: root
 cors-whitelist: http://localhost:3000
 
 # Actuator
@@ -22,9 +22,9 @@ spring:
     init:
       mode: always
   datasource:
-    url: ${db-url}
-    username: ${db-username}
-    password: ${db-password}
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
