@@ -44,7 +44,7 @@ resource "aws_lb_target_group" "api" {
   port        = 8080
 
   health_check {
-    path = "/rest/actuator/health"
+    path = "/actuator/health"
   }
 }
 
