@@ -22,9 +22,13 @@ resource "aws_security_group" "lb" {
   }
 
   egress {
-    protocol    = "tcp"
-    from_port   = 8080
-    to_port     = 8080
+    #    protocol    = "tcp"
+    #    from_port   = 8080
+    #    to_port     = 8080
+    #    cidr_blocks = ["0.0.0.0/0"]
+    protocol    = "-1"
+    from_port   = 0
+    to_port     = 0
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
@@ -44,7 +48,7 @@ resource "aws_lb_target_group" "api" {
   port        = 8080
 
   health_check {
-    path = "/actuator/health"
+    path = "/rest/actuator/health"
   }
 }
 
