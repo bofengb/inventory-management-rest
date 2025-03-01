@@ -2,7 +2,7 @@
 #db-url: jdbc:postgresql://localhost:5432/postgres
 #db-username: postgres
 #db-password: root
-cors-whitelist: http://localhost:3000
+#cors-whitelist: http://localhost:3000
 
 # Actuator
 management.endpoints.web.exposure.include: info,health,httptrace
