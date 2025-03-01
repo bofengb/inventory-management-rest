@@ -14,4 +14,5 @@ public interface ExpenseRepository extends JpaRepository<ExpenseEntity, Long> {
     List<Map<String, Object>> getExpenseBreakdownByCategory();
 
     List<ExpenseEntity> findExpensesByTimestampBetween(LocalDateTime startDate, LocalDateTime endDate);
+
 }

@@ -30,4 +30,5 @@ public class ChartService {
     public List<TransactionByTypeDTO> getInventoryTransaction() {
         return inventoryTransactionRepository.findTransactionByType();
     }
+
 }

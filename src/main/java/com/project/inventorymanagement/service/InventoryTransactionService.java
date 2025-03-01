@@ -157,4 +157,5 @@ public class InventoryTransactionService {
             return new PurchaseAnalysisDTO(localDate, totalCost);
         }).collect(Collectors.toList());
     }
+
 }

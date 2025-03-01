@@ -28,4 +28,5 @@ public class SalesController {
         List<SalesAnalysisDTO> analysis = inventoryTransactionService.getSalesAnalysis(groupBy);
         return ResponseEntity.ok(analysis);
     }
+
 }

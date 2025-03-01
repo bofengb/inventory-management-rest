@@ -39,4 +39,5 @@ public class OrderController {
     public ResponseEntity<List<OrderDetailsDTO>> getOrderDetails() {
         return ResponseEntity.ok().body(orderService.getOrderDetails());
     }
+
 }

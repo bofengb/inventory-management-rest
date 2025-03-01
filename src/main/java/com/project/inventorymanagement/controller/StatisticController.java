@@ -23,4 +23,5 @@ public class StatisticController {
     public ResponseEntity<StatisticDTO> getMonthlyStatistic() {
         return ResponseEntity.ok().body(statisticService.generateMonthlyStatistic());
     }
+
 }

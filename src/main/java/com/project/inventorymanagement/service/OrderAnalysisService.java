@@ -26,4 +26,5 @@ public class OrderAnalysisService {
     public List<OrderDiscountTrendDTO> getOrderDiscountTrends() {
         return orderRepository.findOrderDiscountTrends();
     }
+
 }

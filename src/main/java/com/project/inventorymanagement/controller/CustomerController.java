@@ -25,4 +25,5 @@ public class CustomerController {
     public ResponseEntity<List<CustomerEntity>> getCustomers() {
         return ResponseEntity.ok().body(customerService.getCustomers());
     }
+
 }

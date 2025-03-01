@@ -37,4 +37,5 @@ public class ChartController {
     public ResponseEntity<List<TransactionByTypeDTO>> getInventoryTransaction() {
         return ResponseEntity.ok().body(chartService.getInventoryTransaction());
     }
+
 }
