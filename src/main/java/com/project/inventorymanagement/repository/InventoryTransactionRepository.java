@@ -35,4 +35,5 @@ public interface InventoryTransactionRepository extends JpaRepository<InventoryT
     @Query("SELECT new com.project.inventorymanagement.dto.TransactionByTypeDTO(o.id, o.type, o.timestamp) " +
             "FROM InventoryTransactionEntity o")
     List<TransactionByTypeDTO> findTransactionByType();
+
 }

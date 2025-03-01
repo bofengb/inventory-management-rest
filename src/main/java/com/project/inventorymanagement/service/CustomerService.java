@@ -16,4 +16,5 @@ public class CustomerService {
     public List<CustomerEntity> getCustomers() {
         return customerRepository.findAll();
     }
+
 }

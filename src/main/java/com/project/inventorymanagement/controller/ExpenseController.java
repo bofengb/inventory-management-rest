@@ -25,4 +25,5 @@ public class ExpenseController {
     public ResponseEntity<List<Map<String, Object>>> getExpenseBreakdown() {
         return ResponseEntity.ok().body(expenseService.getExpenseAnalysis());
     }
+
 }

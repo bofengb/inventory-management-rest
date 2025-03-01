@@ -42,4 +42,5 @@ public class ExpenseEntity {
         this.year = this.timestamp.getYear();
         this.month = this.timestamp.getMonthValue();
     }
+
 }

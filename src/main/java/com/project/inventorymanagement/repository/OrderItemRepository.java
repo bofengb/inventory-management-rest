@@ -11,4 +11,5 @@ public interface OrderItemRepository extends JpaRepository<OrderItemEntity, Long
 
     @Query("SELECT COALESCE(AVG(oi.discount), 0) FROM OrderItemEntity oi")
     Float findAverageDiscount();
+
 }

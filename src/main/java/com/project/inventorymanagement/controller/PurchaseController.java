@@ -25,4 +25,5 @@ public class PurchaseController {
         List<PurchaseAnalysisDTO> analysis = inventoryTransactionService.getPurchaseAnalysis();
         return ResponseEntity.ok(analysis);
     }
+
 }

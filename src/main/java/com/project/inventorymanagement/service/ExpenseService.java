@@ -16,4 +16,5 @@ public class ExpenseService {
     public List<Map<String, Object>> getExpenseAnalysis() {
         return expenseRepository.getExpenseBreakdownByCategory();
     }
+
 }

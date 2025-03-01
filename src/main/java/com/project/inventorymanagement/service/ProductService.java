@@ -9,6 +9,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -19,6 +21,7 @@ public class ProductService {
 
     private final ProductRepository productRepository;
     private final InventoryTransactionRepository inventoryTransactionRepository;
+    private final NotificationService notificationService;
 
     public List<ProductDTO> getTopFifteenBestSaleProducts() {
         PageRequest pageable = PageRequest.of(0, 15);
@@ -44,10 +47,20 @@ public class ProductService {
     }
 
     public ProductEntity createProduct(ProductEntity product) {
-        return productRepository.save(product);
+//        return productRepository.save(product);
+        ProductEntity savedProduct = productRepository.save(product);
+        // Format the current date as "yyyy-MM-dd"
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String formattedDate = LocalDateTime.now().format(formatter);
+        String message = "Product create: " + product.getName() +
+                " (Id: " + product.getId() + ") created at " + formattedDate;
+        notificationService.createNotification(message, savedProduct.getId());
+
+        return savedProduct;
     }
 
     public void deleteProduct(Long id) {
         productRepository.deleteById(id);
     }
+
 }

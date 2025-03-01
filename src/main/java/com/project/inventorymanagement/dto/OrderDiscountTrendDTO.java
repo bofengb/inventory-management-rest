@@ -1,6 +1,5 @@
 package com.project.inventorymanagement.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,4 +19,5 @@ public class OrderDiscountTrendDTO {
         this.orderTotalAmount = orderTotalAmount;
         this.totalDiscount = totalDiscount != null ? totalDiscount.floatValue() : 0.0f;
     }
+
 }

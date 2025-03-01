@@ -35,4 +35,5 @@ public interface OrderRepository extends JpaRepository<OrderEntity, Long> {
     @Query("SELECT new com.project.inventorymanagement.dto.OrderByStatusDTO(o.id, o.status, o.createdAt) " +
             "FROM OrderEntity o")
     List<OrderByStatusDTO> findOrdersByStatus();
+
 }
