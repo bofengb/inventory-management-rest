@@ -240,7 +240,8 @@ ALTER SEQUENCE expense_seq RESTART WITH 101;
 
 -- Insert data in notifications
 INSERT INTO notification (id, message, product_id, created_at, is_read) VALUES
-(1, 'Product create: Football (Id: 1) created at 2025-01-01', 1, '2025-02-12 12:00:00', false),
-(2, 'Product create: Basketball (Id: 2) created at 2025-01-01', 2, '2025-02-28 17:00:00', false);
+(1, 'Product create: Tennis Racket (Id: 3) created at 2025-02-01', 3, '2025-02-01 09:00:00', true),
+(2, 'Product create: Football (Id: 1) created at 2025-02-12', 1, '2025-02-12 12:00:00', false),
+(3, 'Product create: Basketball (Id: 2) created at 2025-02-28', 2, '2025-02-28 17:00:00', false);
 -- Adjust the sequence to avoid conflicts with the initial data
 ALTER SEQUENCE notification_seq RESTART WITH 101;
