@@ -1,10 +1,20 @@
 name: Deploy
 
+#on:
+#  push:
+#    branches:
+#      - main
+#      - prod
 on:
-  push:
-    branches:
-      - main
-      - prod
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        description: Which environment to create AWS resources for?
+        required: true
+        options:
+          - staging
+          - prod
 
 jobs:
   test-lint:

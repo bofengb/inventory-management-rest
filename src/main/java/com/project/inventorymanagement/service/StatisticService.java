@@ -28,30 +28,30 @@ public class StatisticService {
     private final InventoryTransactionRepository inventoryTransactionRepository;
     private final CustomerRepository customerRepository;
 
-    // Utility method to get the start of the current month
+    // Get the start of the current month
     private LocalDateTime getStartOfCurrentMonth() {
-//        LocalDate today = LocalDate.now();
+        // LocalDate today = LocalDate.now();
         LocalDate today = LocalDate.of(2025, 2, 1);
         return today.withDayOfMonth(1).atStartOfDay();
     }
 
-    // Utility method to get the start of the last month
+    // Get the start of the last month
     private LocalDateTime getStartOfLastMonth() {
-//        LocalDate lastMonth = LocalDate.now().minusMonths(1);
+        // LocalDate lastMonth = LocalDate.now().minusMonths(1);
         LocalDate lastMonth = LocalDate.of(2025, 1, 1);
         return lastMonth.withDayOfMonth(1).atStartOfDay();
     }
 
-    // Utility method to get the end of the current month
+    // Get the end of the current month
     private LocalDateTime getEndOfCurrentMonth() {
-//        LocalDate today = LocalDate.now();
+        // LocalDate today = LocalDate.now();
         LocalDate today = LocalDate.of(2025, 2, 1);
         return today.withDayOfMonth(today.lengthOfMonth()).atTime(23, 59, 59);
     }
 
-    // Utility method to get the end of the last month
+    // Get the end of the last month
     private LocalDateTime getEndOfLastMonth() {
-//        LocalDate lastMonth = LocalDate.now().minusMonths(1);
+        // LocalDate lastMonth = LocalDate.now().minusMonths(1);
         LocalDate lastMonth = LocalDate.of(2025, 1, 1);
         return lastMonth.withDayOfMonth(lastMonth.lengthOfMonth()).atTime(23, 59, 59);
     }
@@ -107,7 +107,7 @@ public class StatisticService {
         Long lastCustomerGrowth = getCustomerGrowth(startLastMonth, endLastMonth);
         Float lastPendingAmount = getTotalPendingAmount(startLastMonth, endLastMonth);
 
-        // Calculate percentage changes with better handling for edge cases
+        // Calculate percentage changes with edge case handling
         Float salesChange = calculatePercentageChange(lastSales, currentSales);
         Float purchasesChange = calculatePercentageChange(lastPurchases, currentPurchases);
         Float expensesChange = calculatePercentageChange(lastExpenses, currentExpenses);
