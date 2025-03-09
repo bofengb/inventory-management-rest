@@ -43,11 +43,22 @@ public class ProductService {
     }
 
     public List<ProductEntity> searchProducts(String name) {
-        return productRepository.findByNameContaining(name);
+        // return productRepository.findByNameContaining(name);
+        String cleanedName = cleanString(name);
+        List<ProductEntity> products = productRepository.findAll();
+
+        return products.stream()
+                .filter(product -> cleanString(product.getName()).contains(cleanedName))
+                .collect(Collectors.toList());
+    }
+
+    private String cleanString(String str) {
+        // Clean strings: remove non-alphanumeric characters and trim extra spaces
+        return str.replaceAll("[^a-zA-Z0-9]", "").toLowerCase().trim();
     }
 
     public ProductEntity createProduct(ProductEntity product) {
-//        return productRepository.save(product);
+        // return productRepository.save(product);
         ProductEntity savedProduct = productRepository.save(product);
         // Format the current date as "yyyy-MM-dd"
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
