@@ -28,7 +28,7 @@ public class NotificationController {
     )
     @GetMapping
     public ResponseEntity<List<NotificationEntity>> getAllNotifications() {
-        return ResponseEntity.ok(notificationService.getAllNotifications());
+        return ResponseEntity.ok(notificationService.getLatestYearNotifications());
     }
 
     @Operation(
