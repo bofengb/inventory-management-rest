@@ -240,9 +240,25 @@ ALTER SEQUENCE expense_seq RESTART WITH 101;
 
 -- Insert data in notifications
 INSERT INTO notification (id, message, product_id, created_at, is_read) VALUES
-(1, 'Product create: Tennis Racket (Id: 3) created at 2025-02-01', 3, '2025-02-01 09:00:00', true),
-(2, 'Product create: Football (Id: 1) created at 2025-02-12', 1, '2025-02-12 12:00:00', false),
-(3, 'Product create: Soccer Jersey (Id: 4) created at 2025-02-15', 4, '2025-02-15 08:00:00', false),
-(4, 'Product create: Basketball (Id: 2) created at 2025-02-28', 2, '2025-02-28 17:00:00', false);
+(1, 'Product create: Football (Id: 1) created at 2024-02-12', 1, '2024-02-12 12:00:00', false),
+(2, 'Product create: Basketball (Id: 2) created at 2024-02-13', 2, '2024-02-13 12:00:00', false),
+(3, 'Product create: Tennis Racket (Id: 3) created at 2024-02-14', 3, '2024-02-14 12:00:00', false),
+(4, 'Product create: Soccer Jersey (Id: 4) created at 2024-02-15', 4, '2024-02-15 12:00:00', false),
+(5, 'Product create: Running Shoes (Id: 5) created at 2024-02-16', 5, '2024-02-16 12:00:00', false),
+(6, 'Product create: Baseball Glove (Id: 6) created at 2024-02-17', 6, '2024-02-17 12:00:00', false),
+(7, 'Product create: Golf Clubs (Id: 7) created at 2024-02-18', 7, '2024-02-18 12:00:00', false),
+(8, 'Product create: Yoga Mat (Id: 8) created at 2024-02-19', 8, '2024-02-19 12:00:00', false),
+(9, 'Product create: Cycling Helmet (Id: 9) created at 2024-02-20', 9, '2024-02-20 12:00:00', false),
+(10, 'Product create: Skateboard (Id: 10) created at 2024-02-21', 10, '2024-02-21 12:00:00', false),
+(11, 'Product create: Cricket Bat (Id: 11) created at 2024-02-22', 11, '2024-02-22 12:00:00', false),
+(12, 'Product create: Swimming Goggles (Id: 12) created at 2024-02-23', 12, '2024-02-23 12:00:00', false),
+(13, 'Product create: Boxing Gloves (Id: 13) created at 2024-02-24', 13, '2024-02-24 12:00:00', false),
+(14, 'Product create: Hockey Stick (Id: 14) created at 2024-02-25', 14, '2024-02-25 12:00:00', false),
+(15, 'Product create: Ski Boots (Id: 15) created at 2024-02-26', 15, '2024-02-26 12:00:00', false),
+(16, 'Product create: Snowboard (Id: 16) created at 2024-02-27', 16, '2024-02-27 12:00:00', false),
+(17, 'Product create: Martial Arts Uniform (Id: 17) created at 2025-01-01', 17, '2025-01-01 12:00:00', true),
+(18, 'Product create: Badminton Racket (Id: 18) created at 2025-01-02', 18, '2025-01-02 12:00:00', false),
+(19, 'Product create: Volleyball (Id: 19) created at 2025-01-03', 19, '2025-01-03 12:00:00', false),
+(20, 'Product create: Rowing Oar (Id: 20) created at 2025-01-04', 20, '2025-01-04 12:00:00', false);
 -- Adjust the sequence to avoid conflicts with the initial data
 ALTER SEQUENCE notification_seq RESTART WITH 101;
