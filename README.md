@@ -2,13 +2,13 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
   <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" /> 
   <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" />
   <img src="https://img.shields.io/badge/Terraform-623CE4?style=for-the-badge&logo=terraform&logoColor=white" />
   <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" />
   <img src="https://img.shields.io/badge/Redux%20Toolkit-764ABC?style=for-the-badge&logo=redux&logoColor=white" />
   <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
 </p>
 
 ## 1. Introduction
@@ -32,6 +32,8 @@ This project demonstrates expertise in **full-stack development, cloud architect
 🛠 **API Documentation (Swagger UI):** [Swagger Endpoints](http://localhost:8080/rest/swagger-ui/index.html)
 
 > 🚀 Explore the live demo and interact with the backend API using Swagger UI.
+
+👉 **Frontend Repository:** [GitHub Link to Frontend](https://github.com)
 
 ---
 
@@ -79,7 +81,7 @@ By structuring Terraform into **setup** and **deploy** stages, we ensure that de
 
 ### 📌 Terraform Workflow Diagram
 <p align="center">
-  <img src="./img/terraform-workflow.png" alt="Terraform Workflow Diagram" width="500" />
+  <img src="./img/terraform-workflow.png" alt="Terraform Workflow Diagram" width="480" />
 </p>
 
 ### 4.1 Access Control for Terraform in AWS
@@ -113,7 +115,7 @@ We use **GitHub Actions** for **Continuous Integration (CI)** and **Continuous D
 
 ### 📌 GitHub Actions CI/CD Pipeline Diagram
 <p align="center">
-  <img src="./img/github-actions-ci-cd.png" alt="GitHub Actions CI/CD Pipeline Diagram" width="750" />
+  <img src="./img/github-actions-ci-cd.png" alt="GitHub Actions CI/CD Pipeline Diagram" width="770" />
 </p>
 
 ### 5.1 Workflows Overview
@@ -155,7 +157,7 @@ We build a **highly available, scalable, reliable, and secure** AWS cloud infras
 
 ### 📌 AWS Architecture Diagram
 <p align="center">
-  <img src="./img/aws-architecture.png" alt="AWS Architecture Diagram" width="750" />
+  <img src="./img/aws-architecture.png" alt="AWS Architecture Diagram" width="770" />
 </p>
 
 ### 6.2 Security Best Practices
@@ -187,8 +189,8 @@ We build a **highly available, scalable, reliable, and secure** AWS cloud infras
 
 ### 6.3.5 Application Load Balancer (ALB)
 📌 **ALB Setup:**
-- **Public subnets** → Exposes application externally.
-- **Security Group** → Allow inbound traffic on **ports 80 & 443**, and allow all outbound traffic to enable communication with backend services.
+- **Public Subnets** → Exposes application externally.
+- **Security Group** → Allows inbound traffic on **ports 80 & 443**, and allows all outbound traffic to enable communication with backend services.
 
 📌 **Target Group & Health Checks:**
 - ALB forwards traffic to **ECS tasks** via a Target Group (IP-based routing, port **8080**).
@@ -200,14 +202,10 @@ We build a **highly available, scalable, reliable, and secure** AWS cloud infras
 ### 6.3.6 CloudWatch Monitoring
 - Captures **ECS task logs** for **debugging & monitoring**.
 
-### 6.3.7 Secure External Access
-✅ Customers **connect via HTTPS** through **ALB**.  
-✅ ALB forwards requests to **ECS tasks** in a private subnet.
-
 ### 6.4 Frontend Deployment (Next.js via AWS Amplify)
 
 ### 6.4.1 Amplify Hosting
-- **Connect GitHub** repository → Select a deployment branch.
+- Connect **GitHub repository** → Select a deployment branch.
 - Set **environment variables** in Amplify.
 
 ### 6.4.2 API Gateway (HTTPS Enforcement)
@@ -255,12 +253,12 @@ We build a **highly available, scalable, reliable, and secure** AWS cloud infras
     - **Logging**
 
 ### 6.5.6 ECS Service
-✅ Ensures the **correct number of tasks** are running.  
-✅ Routes traffic **via ALB**.
+- Ensures the **correct number of tasks** are running.  
+- Routes traffic **via ALB**.
 
 ### 6.5.7 Security Group Rules
-✅ **ALB → ECS** (port **8080**, private subnet)  
-✅ **ECS → RDS** (port **5432**, private subnet)
+- **ALB → ECS** (port **8080**, private subnet)  
+- **ECS → RDS** (port **5432**, private subnet)
 
 ---
 
@@ -269,7 +267,7 @@ We build a **highly available, scalable, reliable, and secure** AWS cloud infras
 The database schema was generated using [Prismaliser](https://prismaliser.app/). The ER diagram is as follows:
 
 <p align="center">
-  <img src="./img/er-diagram.png" alt="ER Diagram" width="600">
+  <img src="./img/er-diagram.png" alt="ER Diagram" width="620">
 </p>
 
 ---
@@ -311,10 +309,8 @@ The frontend consists of multiple pages, including:
 
 - **Dashboard**
 - **Orders, Products, Customers**
-- **Settings, Notifications**
 - **Statistics & Charts** _(Orders, Payments, Transactions)_
-
-📊 Statistical analysis is performed on the frontend-side using database-stored data. Tables and charts are **fully responsive**.
+- **Settings, Notifications**
 
 ### 10.2 Fuzzy Search
 A **fuzzy search function** is implemented using the Simple Substring Match with Tolerance for Extra Spaces algorithm.
