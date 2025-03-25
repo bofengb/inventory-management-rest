@@ -33,7 +33,7 @@ This project demonstrates expertise in **full-stack development, cloud architect
 
 > 🚀 Explore the live demo and interact with the backend API using Swagger UI.
 
-👉 **Frontend Repository:** [GitHub Link to Frontend](https://github.com)
+👉 **Frontend Repository:** [GitHub Link to Frontend](https://github.com/bofengb/inventory-management-web)
 
 ---
 
