@@ -77,6 +77,11 @@ The **Terraform workflow** consists of two main stages:
 
 By structuring Terraform into **setup** and **deploy** stages, we ensure that deployments remain **version-controlled** and **automated**.
 
+### 📌 Terraform Workflow Diagram
+<p align="center">
+  <img src="./img/terraform-workflow.png" alt="Terraform Workflow Diagram" width="500" />
+</p>
+
 ### 4.1 Access Control for Terraform in AWS
 To enable Terraform to manage AWS resources in a **CI/CD pipeline (GitHub Actions)**, we configure access:
 
@@ -105,6 +110,11 @@ We use **GitHub Actions** for **Continuous Integration (CI)** and **Continuous D
 
 ✅ Workflows are stored in `.github/workflows/` and triggered by **GitHub events**.  
 ✅ Each workflow is structured as **jobs** containing sequential steps.
+
+### 📌 GitHub Actions CI/CD Pipeline Diagram
+<p align="center">
+  <img src="./img/github-actions-ci-cd.png" alt="GitHub Actions CI/CD Pipeline Diagram" width="650" />
+</p>
 
 ### 5.1 Workflows Overview
 - **Checks Workflow** → Runs Terraform linting (format & validate).
