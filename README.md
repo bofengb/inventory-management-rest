@@ -242,7 +242,9 @@ We build a **highly available, scalable, reliable, and secure** AWS cloud infras
 
 The database schema was generated using [Prismaliser](https://prismaliser.app/). The ER diagram is as follows:
 
-<img src="./img/er-diagram.png" alt="Alt Text" width="300" height="200">
+<p align="center">
+  <img src="./img/er-diagram.png" alt="ER Diagram" width="700">
+</p>
 
 ---
 
