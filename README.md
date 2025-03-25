@@ -1,5 +1,16 @@
 <h1 align="center">E-Sports Inventory Management System</h1>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" /> 
+  <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" />
+  <img src="https://img.shields.io/badge/Terraform-623CE4?style=for-the-badge&logo=terraform&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" />
+  <img src="https://img.shields.io/badge/Redux%20Toolkit-764ABC?style=for-the-badge&logo=redux&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+</p>
+
 ## 1. Introduction
 
 This project is a **scalable, cloud-native Full-Stack Inventory Management System** built with **Next.js (frontend)** and **Spring Boot (backend)**, fully deployed on **Amazon Web Services (AWS)** with modern DevOps practices.
@@ -243,7 +254,7 @@ We build a **highly available, scalable, reliable, and secure** AWS cloud infras
 The database schema was generated using [Prismaliser](https://prismaliser.app/). The ER diagram is as follows:
 
 <p align="center">
-  <img src="./img/er-diagram.png" alt="ER Diagram" width="700">
+  <img src="./img/er-diagram.png" alt="ER Diagram" width="600">
 </p>
 
 ---
