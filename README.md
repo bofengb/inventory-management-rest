@@ -113,7 +113,7 @@ We use **GitHub Actions** for **Continuous Integration (CI)** and **Continuous D
 
 ### 📌 GitHub Actions CI/CD Pipeline Diagram
 <p align="center">
-  <img src="./img/github-actions-ci-cd.png" alt="GitHub Actions CI/CD Pipeline Diagram" width="700" />
+  <img src="./img/github-actions-ci-cd.png" alt="GitHub Actions CI/CD Pipeline Diagram" width="750" />
 </p>
 
 ### 5.1 Workflows Overview
@@ -152,6 +152,11 @@ We use **GitHub Actions** for **Continuous Integration (CI)** and **Continuous D
 
 ### 6.1 AWS Architecture Overview
 We build a **highly available, scalable, reliable, and secure** AWS cloud infrastructure for containerized applications.
+
+### 📌 AWS Architecture Diagram
+<p align="center">
+  <img src="./img/aws-architecture.png" alt="AWS Architecture Diagram" width="750" />
+</p>
 
 ### 6.2 Security Best Practices
 ✅ **Least privilege** IAM permissions  
