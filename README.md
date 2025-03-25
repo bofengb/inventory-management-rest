@@ -113,7 +113,7 @@ We use **GitHub Actions** for **Continuous Integration (CI)** and **Continuous D
 
 ### 📌 GitHub Actions CI/CD Pipeline Diagram
 <p align="center">
-  <img src="./img/github-actions-ci-cd.png" alt="GitHub Actions CI/CD Pipeline Diagram" width="650" />
+  <img src="./img/github-actions-ci-cd.png" alt="GitHub Actions CI/CD Pipeline Diagram" width="700" />
 </p>
 
 ### 5.1 Workflows Overview
