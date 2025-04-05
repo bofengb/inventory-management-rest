@@ -28,8 +28,8 @@ This project demonstrates expertise in **full-stack development, cloud architect
 
 ## 2. Project Demonstration
 
-🔗 **Live Application:** [View Deployed App](https://main.d2wr9fcu22gi29.amplifyapp.com/)  
-🛠 **API Documentation (Swagger UI):** [Swagger Endpoints](http://ims-staging-lb-571391367.us-east-1.elb.amazonaws.com/rest/swagger-ui/index.html)
+🔗 **Live Application:** [View Deployed App](https://main.d2wr9fcu22gi29.amplifyapp.com)  
+🛠 **API Documentation (Swagger UI):** [Swagger Endpoints](http://ims-staging-lb-792182776.us-east-1.elb.amazonaws.com/rest/swagger-ui/index.html)
 
 > 🚀 Explore the live demo and interact with the backend API using Swagger UI.
 
