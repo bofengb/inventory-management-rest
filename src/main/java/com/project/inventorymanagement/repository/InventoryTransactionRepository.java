@@ -36,4 +36,6 @@ public interface InventoryTransactionRepository extends JpaRepository<InventoryT
             "FROM InventoryTransactionEntity o")
     List<TransactionByTypeDTO> findTransactionByType();
 
+    List<InventoryTransactionEntity> findByProductId(Long productId);
+
 }

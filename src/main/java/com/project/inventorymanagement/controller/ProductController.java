@@ -1,6 +1,7 @@
 package com.project.inventorymanagement.controller;
 
 import com.project.inventorymanagement.dto.ProductDTO;
+import com.project.inventorymanagement.dto.ProductDetailInfoDTO;
 import com.project.inventorymanagement.entity.ProductEntity;
 import com.project.inventorymanagement.service.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -63,5 +64,10 @@ public class ProductController {
 //        productService.deleteProduct(id);
 //        return ResponseEntity.ok().build();
 //    }
+
+    @GetMapping("/{productId}")
+    public ResponseEntity<ProductDetailInfoDTO> getProductStats(@PathVariable Long productId) {
+        return ResponseEntity.ok(productService.getProductDetail(productId));
+    }
 
 }
