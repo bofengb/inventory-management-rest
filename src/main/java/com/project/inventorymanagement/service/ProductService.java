@@ -90,33 +90,18 @@ public class ProductService {
         int totalUnitsSold = orderItems.stream()
                 .mapToInt(OrderItemEntity::getQuantity)
                 .sum();
-
-        float totalRevenue = (float) orderItems.stream()
-                .mapToDouble(item -> item.getUnitPrice() * item.getQuantity() * (1 - item.getDiscount()))
-                .sum();
-
         int uniqueCustomers = orderItemRepository.countDistinctCustomerByProductId(productId);
 
         // ====== INVENTORY DATA ======
         List<InventoryTransactionEntity> transactions = inventoryTransactionRepository.findByProductId(productId);
-        int inventoryLeft = transactions.stream()
+        int inventoryLeft = -transactions.stream()
                 .mapToInt(tx -> tx.getType() == TransactionType.SALE ? tx.getQuantity() : -tx.getQuantity())
                 .sum();
-
-        boolean lowStockAlert = inventoryLeft < 25;
-
-        float inventoryCost = (float) transactions.stream()
-                .filter(tx -> tx.getType() == TransactionType.SALE)
-                .mapToDouble(tx -> tx.getUnitPrice() * tx.getQuantity())
-                .sum();
-
-        float estimatedProfit = totalRevenue - inventoryCost;
 
         // ====== MOVEMENT RATE (items/month) ======
         if (orderItems.isEmpty()) {
             // Avoid divide by zero
-            return buildDTO(product, totalUnitsSold, totalRevenue, uniqueCustomers, inventoryLeft,
-                    lowStockAlert, estimatedProfit, 0);
+            return buildDTO(product, uniqueCustomers, inventoryLeft, 0);
         }
 
         LocalDateTime firstSale = orderItems.stream()
@@ -127,27 +112,21 @@ public class ProductService {
         long monthsBetween = ChronoUnit.MONTHS.between(firstSale.toLocalDate().withDayOfMonth(1), LocalDate.now().withDayOfMonth(1));
         monthsBetween = Math.max(monthsBetween, 1); // avoid division by 0
 
-        float movementRate = (float) totalUnitsSold / monthsBetween;
+        float movementRate = (float) totalUnitsSold / monthsBetween * 10;
 
-        return buildDTO(product, totalUnitsSold, totalRevenue, uniqueCustomers, inventoryLeft,
-                lowStockAlert, estimatedProfit, movementRate);
+        return buildDTO(product, uniqueCustomers, inventoryLeft, movementRate);
     }
 
-    private ProductDetailInfoDTO buildDTO(ProductEntity product, int totalSold, float revenue, int customers,
-                                     int inventoryLeft, boolean stockAlert, float profit, float movementRate) {
+    private ProductDetailInfoDTO buildDTO(ProductEntity product, int customers,
+                                     int inventoryLeft, float movementRate) {
         ProductDetailInfoDTO dto = new ProductDetailInfoDTO();
         dto.setProductId(product.getId());
         dto.setProductName(product.getName());
         dto.setBasePrice(product.getBasePrice());
         dto.setRating(product.getRating());
 
-        dto.setTotalUnitsSold(totalSold);
-        dto.setTotalRevenue(revenue);
         dto.setTotalCustomers(customers);
         dto.setInventoryLeft(inventoryLeft);
-
-        dto.setLowStockAlert(stockAlert);
-        dto.setEstimatedProfit(profit);
         dto.setInventoryMovementRate(movementRate);
         return dto;
     }

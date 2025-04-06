@@ -28,10 +28,16 @@ This project demonstrates expertise in **full-stack development, cloud architect
 
 ## 2. Project Demonstration
 
-🔗 **Live Application:** [View Deployed App](https://main.d2wr9fcu22gi29.amplifyapp.com)  
-🛠 **API Documentation (Swagger UI):** [Swagger Endpoints](http://ims-staging-lb-792182776.us-east-1.elb.amazonaws.com/rest/swagger-ui/index.html)
+[comment]: <> (🔗 **Live Application:** [View Deployed App]&#40;https://main.d2wr9fcu22gi29.amplifyapp.com&#41;  )
+[comment]: <> (🛠 **API Documentation &#40;Swagger UI&#41;:** [Swagger Endpoints]&#40;http://ims-staging-lb-792182776.us-east-1.elb.amazonaws.com/rest/swagger-ui/index.html&#41;)
 
-> 🚀 Explore the live demo and interact with the backend API using Swagger UI.
+[comment]: <> (> 🚀 Explore the live demo and interact with the backend API using Swagger UI.)
+
+[comment]: <> (👉 **Frontend Repository:** [GitHub Link to Frontend]&#40;https://github.com/bofengb/inventory-management-web&#41;)
+
+> 🚀 Explore the live demo deployed to AWS.
+
+🔗 **Live Application:** [View Deployed App](https://main.d2wr9fcu22gi29.amplifyapp.com)
 
 👉 **Frontend Repository:** [GitHub Link to Frontend](https://github.com/bofengb/inventory-management-web)
 

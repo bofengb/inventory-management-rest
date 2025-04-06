@@ -15,13 +15,8 @@ public class ProductDetailInfoDTO {
     private Float basePrice;
     private Float rating;
 
-    private Integer totalUnitsSold;
-    private Float totalRevenue;
     private Integer totalCustomers;
     private Integer inventoryLeft;
-
-    private Boolean lowStockAlert;
-    private Float estimatedProfit;
     // Items sold per month
     private Float inventoryMovementRate;
 }

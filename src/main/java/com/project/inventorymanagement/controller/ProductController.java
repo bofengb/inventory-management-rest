@@ -65,6 +65,10 @@ public class ProductController {
 //        return ResponseEntity.ok().build();
 //    }
 
+    @Operation(
+            summary = "Get product detail",
+            description = "Get a product detail by projectId."
+    )
     @GetMapping("/detail/{productId}")
     public ResponseEntity<ProductDetailInfoDTO> getProductStats(@PathVariable Long productId) {
         return ResponseEntity.ok(productService.getProductDetail(productId));
